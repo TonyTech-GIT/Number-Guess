@@ -1,5 +1,5 @@
-// let randomNumber = Math.floor(Math.random() * 11);
-let randomNumber = 9;
+let randomNumber = Math.floor(Math.random() * 11);
+// let randomNumber = 9;
 let btn = document.getElementById("button");
 let text = document.getElementById("entry");
 let output = document.getElementById("result");
@@ -21,6 +21,7 @@ btn.addEventListener("click", () => {
     output.innerHTML = `<p><strong>Wrong guess..</strong></p>`;
   }
 });
-restart.addEventListener("click", () => {
+restart.addEventListener("click", (e) => {
+  e.preventDefault();
   window.location.reload();
 });
